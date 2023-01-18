@@ -1,0 +1,14 @@
+.label{
+    -fx-font-family:"Lucida Sans";
+    -fx-text-fill: #FFFFFF;
+}
+
+.label-infos{
+    -fx-font-size: 14;
+    -fx-font-weight: 300;
+}
+
+.label-variable{
+    -fx-font-size: 16;
+    -fx-font-weight: 800;
+}

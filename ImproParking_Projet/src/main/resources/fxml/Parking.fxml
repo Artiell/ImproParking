@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.improparking_projet.MVC.ParkingController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="10"/> <!--40-->
+        <ColumnConstraints percentWidth="20"/> <!--80-->
+        <ColumnConstraints percentWidth="40"/> <!--140-->
+        <ColumnConstraints percentWidth="20"/> <!--80-->
+        <ColumnConstraints percentWidth="10"/> <!--60-->
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="20"/> <!--100-->
+        <RowConstraints percentHeight="10"/> <!--50-->
+        <RowConstraints percentHeight="10"/> <!--50-->
+        <RowConstraints percentHeight="10"/> <!--50-->
+        <RowConstraints percentHeight="10"/> <!--50-->
+        <RowConstraints percentHeight="35"/> <!--175-->
+        <RowConstraints percentHeight="5"/> <!--25-->
+    </rowConstraints>
+
+    <ImageView GridPane.columnSpan="2" fitWidth="90" fitHeight="90">
+        <Image url="@../images/LogoParking.png"/>
+    </ImageView>
+
+    <Label text="Nombre total de places : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+    <Label fx:id="nbPlacesTotal" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+    <Label text="Nombre de places libres : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+    <Label fx:id="nbPlacesLibres" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+    <Label text="Revenu du parking : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+    <Label fx:id="revenu" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+    <Label text="Voitures présentes : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+    <TableView fx:id="tableViewVoitures" onMouseClicked="#infosVoiture" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="3">
+        <columns>
+            <TableColumn fx:id="tableColumnImmatriculation" prefWidth="120" text="Immatriculation">
+                <cellValueFactory><PropertyValueFactory property="immatriculation" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnEtat" prefWidth="120" text="Etat">
+                <cellValueFactory><PropertyValueFactory property="etatVoiture" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnParking" prefWidth="70" text="Parking">
+                <cellValueFactory><PropertyValueFactory property="gareParking" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</GridPane>

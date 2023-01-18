@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.Label?>
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.improparking_projet.MVC.VoitureController">
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="28.0" /> <!--Bord supérieur de l'écran-->
+        <ColumnConstraints percentWidth="2.0"/>
+        <ColumnConstraints percentWidth="33.0"/>
+        <ColumnConstraints percentWidth="25.0"/>
+        <ColumnConstraints percentWidth="2.0"/>
+        <ColumnConstraints percentWidth="10.0" /> <!--Bord inférieur de l'écran-->
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="18.0" /> <!--Bord gauche de l'écran-->
+        <RowConstraints percentHeight="4.0"/>
+        <RowConstraints percentHeight="14.0"/>
+        <RowConstraints percentHeight="14.0"/>
+        <RowConstraints percentHeight="14.0"/>
+        <RowConstraints percentHeight="14.0"/>
+        <RowConstraints percentHeight="4.0"/>
+        <RowConstraints percentHeight="18.0" /> <!--Bord droit de l'écran-->
+    </rowConstraints>
+
+    <ImageView fitHeight="360" fitWidth="640" GridPane.columnSpan="6" GridPane.rowSpan="8">
+        <Image url="@../images/EcranVoiture.png" />
+    </ImageView>
+
+    <Label text="Date d'arrivée : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <Label fx:id="dateArrivee" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+    <Label text="Durée de stationnement : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+    <Label fx:id="dureeStationnement" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+    <Label text="Etat de la voiture : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+    <Label fx:id="etatVoiture" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+    <Label text="Parking stationnée : " styleClass="label-infos" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+    <Label fx:id="parkingStationnee" styleClass="label-variable" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+
+</GridPane>

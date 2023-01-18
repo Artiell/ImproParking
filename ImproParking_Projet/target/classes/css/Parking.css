@@ -1,0 +1,25 @@
+.root{
+    -fx-background-color: rgb(227, 254, 252);
+}
+
+.label-infos{
+    -fx-font-size: 16;
+    -fx-font-family:"Lucida Sans";
+    -fx-font-weight: 300;
+}
+
+.label-variable{
+    -fx-font-size: 18;
+    -fx-font-family: "Lucida Sans";
+    -fx-font-weight: 800;
+}
+
+.table-view {
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5 5 5 5;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}

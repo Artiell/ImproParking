@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.improparking_projet.MVC.SimulationController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="73.333333333" />
+        <ColumnConstraints percentWidth="26.666666666" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="10" />
+        <RowConstraints percentHeight="75" />
+        <RowConstraints percentHeight="8" />
+        <RowConstraints percentHeight="7" />
+    </rowConstraints>
+
+    <Canvas fx:id="canvasMap" height="560.0" width="880.0" GridPane.rowSpan="4" />
+
+    <Canvas fx:id="canvasVoiture" height="560.0" width="880.0" GridPane.rowSpan="4" />
+
+    <Label fx:id="menu" text="MENU" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+      <effect>
+         <DropShadow />
+      </effect>
+    </Label>
+
+    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <rowConstraints>
+            <RowConstraints percentHeight="10" />
+            <RowConstraints percentHeight="10" />
+            <RowConstraints percentHeight="10" />
+            <RowConstraints percentHeight="10" />
+            <RowConstraints percentHeight="10" />
+            <RowConstraints percentHeight="50" />
+        </rowConstraints>
+
+        <Label styleClass="label-Titre" text="PARKINGS" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+
+        <Label fx:id="parking1" styleClass="label-Objet" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <tooltip>
+                <Tooltip text="Informations sur le parking 1" />
+            </tooltip>
+        </Label>
+        <Button fx:id="boutonParking1" onAction="#infosParking" prefHeight="38.0" prefWidth="300.0" styleClass="button-Objet" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label fx:id="parking2" styleClass="label-Objet" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Button fx:id="boutonParking2" onAction="#infosParking" prefHeight="38.0" prefWidth="300.0" styleClass="button-Objet" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <tooltip>
+                <Tooltip text="Informations sur le parking 2" />
+            </tooltip>
+        </Button>
+        <Label fx:id="parking3" styleClass="label-Objet" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Button fx:id="boutonParking3" onAction="#infosParking" prefHeight="38.0" prefWidth="300.0" styleClass="button-Objet" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <tooltip>
+                <Tooltip text="Informations sur le parking 3" />
+            </tooltip>
+        </Button>
+
+        <Label styleClass="label-Titre" text="VOITURES" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+
+        <TableView fx:id="tableViewVoitures" onMouseClicked="#infosVoiture" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            <columns>
+                <TableColumn fx:id="tableColumnImmatriculation" prefWidth="100" text="Immatriculation">
+                    <cellValueFactory><PropertyValueFactory property="immatriculation" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnEtat" prefWidth="120" text="Etat">
+                    <cellValueFactory><PropertyValueFactory property="etatVoiture" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnParking" prefWidth="70" text="Parking">
+                    <cellValueFactory><PropertyValueFactory property="gareParking" /></cellValueFactory>
+                </TableColumn>
+            </columns>
+            <GridPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+        </TableView>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+    </GridPane>
+
+
+    <Button onAction="#creationVoiture" text="Creation d'une voiture" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <tooltip>
+            <Tooltip text="Création d'une voiture sur la map" />
+        </tooltip>
+    </Button>
+
+    <Rectangle fill="black" height="30.0" width="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    <Label fx:id="affichageDate" styleClass="label-Date" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+
+</GridPane>

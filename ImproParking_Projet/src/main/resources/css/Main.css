@@ -1,0 +1,30 @@
+.root{
+    -fx-background-color: rgb(150, 200, 225);
+}
+
+.label {
+    -fx-font-size: 27;
+    -fx-text-fill: black;
+    -fx-font-family:"Cocogoose";
+    -fx-font-weight: 700;
+}
+
+.button {
+    -fx-font-size: 17;
+    -fx-font-family:"Lucida Sans";
+    -fx-font-weight: 500;
+    -fx-text-fill: white;
+    -fx-border-color: #232323;
+    -fx-background-color: #3f3f3f;
+    -fx-border-width: 2;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10;
+}
+
+.button:hover {
+    -fx-background-color: #696969;
+}
+
+.button:pressed {
+    -fx-background-color: #636363;
+}
