@@ -3,7 +3,7 @@
 
 
 ## Description
-Ce projet à pour but de simuler le fonctionnement de parkings et voitures intelligente. Ceci en intégrant un système de négociation entre les différentes parties et modéliser le déplacement des voitures vers le parking qu'elle a choisie.
+Ce projet à pour but de simuler le fonctionnement de parkings et voitures intelligente. Ceci en intégrant un système de négociation entre les différentes parties et modéliser le déplacement des voitures vers le parking qu'elle a choisie. Le projet à été réalisé dans le cadre du LIFRPROJET, UE de l'université Lyon 1 uniquement à titre éducatif.
 
 ## IDE recommandé
 Pour faire fonctionner ce projet JAVA, nous vous recommendons d'installer Intellij qui est un IDE proposé par JetBrain.
